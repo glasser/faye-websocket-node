@@ -13,7 +13,7 @@ existing [Node](http://nodejs.org/) application. It does not provide any
 abstraction other than the standard [WebSocket
 API](http://dev.w3.org/html5/websockets/).
 
-It also provides an abstraction for handling
+It also proviedes an abstraction for handling
 [EventSource](http://dev.w3.org/html5/eventsource/) connections, which are
 one-way connections that allow the server to push data to the client. They are
 based on streaming HTTP responses and can be easier to access via proxies than
@@ -169,7 +169,7 @@ array of extensions to the `:extensions` option. For example, to add
 ```js
 var deflate = require('permessage-deflate');
 
-var ws = new WebSocket(request, null, {extensions: [deflate]});
+var ws = new WebSocket(request, socket, body, null, {extensions: [deflate]});
 ```
 
 
